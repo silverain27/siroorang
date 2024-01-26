@@ -25,7 +25,7 @@ function TopBanner() {
         <style.TopBanner>
           <style.TopBanInner>
             <style.TopBanTxt>
-              <a href="!">다노샵 회원가입 시 최대 10만원 쿠폰팩 증정</a>
+              <a href="!">시루떡집 회원가입 시 최대 10만원 쿠폰팩 증정</a>
             </style.TopBanTxt>
             <style.TopBanClose>
               <input type="checkbox" id="checkbox" />

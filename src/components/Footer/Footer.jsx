@@ -8,7 +8,7 @@ function Main() {
         <style.FooterInner>
           <style.LogoWrap>
             <Link to="/">
-              <img src="/img/header/logo.jpg" alt="" />
+              <img src="/img/header/siroo_logo.jpeg" alt="" />
             </Link>
           </style.LogoWrap>
           <style.BtnUtil>

@@ -15,17 +15,24 @@ function Header({ isAboutHeader }) {
     };
   }, []);
 
+  // const cate = [
+  //   { id: 1, name: "전 상품" },
+  //   { id: 2, name: "SALE" },
+  //   { id: 3, name: "100원딜" },
+  //   { id: 4, name: "식단관리" },
+  //   { id: 5, name: "간편식" },
+  //   { id: 6, name: "베이커리" },
+  //   { id: 7, name: "간식·음료" },
+  //   { id: 8, name: "분식·반찬" },
+  //   { id: 9, name: "홈트용품" },
+  //   { id: 10, name: "리빙용품" },
+  // ];
   const cate = [
     { id: 1, name: "전 상품" },
-    { id: 2, name: "SALE" },
-    { id: 3, name: "100원딜" },
-    { id: 4, name: "식단관리" },
-    { id: 5, name: "간편식" },
-    { id: 6, name: "베이커리" },
-    { id: 7, name: "간식·음료" },
-    { id: 8, name: "분식·반찬" },
-    { id: 9, name: "홈트용품" },
-    { id: 10, name: "리빙용품" },
+    { id: 2, name: "설기류" },
+    { id: 3, name: "모듬 찰떡류" },
+    { id: 4, name: "답례" },
+    
   ];
   return (
     <>
@@ -69,7 +76,8 @@ function Header({ isAboutHeader }) {
           <style.HeaderBottom>
             <style.LogoWrap>
               <Link to="/">
-                <img src="/img/header/logo.jpg" alt="" />
+                <img src="/img/header/siroo_logo.jpeg" alt="" />
+                <img src="/img/header/siroo_title.jpeg" alt="" />
               </Link>
             </style.LogoWrap>
             <style.MypageWrap>

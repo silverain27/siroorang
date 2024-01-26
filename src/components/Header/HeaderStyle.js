@@ -90,7 +90,7 @@ export const LogoWrap = styled.div`
   height: 6rem;
   img {
     max-width: 40rem;
-    max-height: 6rem;
+    max-height: 10rem;
   }
 `;
 
@@ -113,9 +113,11 @@ export const BotCategory = styled.div`
   ul {
     display: flex;
     height: 8rem;
+    flex-wrap:wrap;
   }
   li {
     padding-right: 5rem;
+    flex-wrap:wrap;
   }
   a {
     font-size: 1.6rem;
