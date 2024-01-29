@@ -41,7 +41,7 @@ function Header({ isAboutHeader }) {
           <style.HeaderTop>
             <ul className="top_list">
               <li>
-                <style.Link href="/Login">회원가입</style.Link>
+                <style.Link href="/register">회원가입</style.Link>
               </li>
               <li>
                 <style.Link href="/login">로그인</style.Link>
@@ -77,7 +77,7 @@ function Header({ isAboutHeader }) {
             <style.LogoWrap>
               <Link to="/">
                 <img src="/img/header/siroo_logo.jpeg" alt="" />
-                <img src="/img/header/siroo_title.jpeg" alt="" />
+                {/* <img src="/img/header/siroo_title.jpeg" alt="" />일단 중지 */} 
               </Link>
             </style.LogoWrap>
             <style.MypageWrap>

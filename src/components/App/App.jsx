@@ -7,6 +7,7 @@ import GlobalStyles from "../../GlobalStyles";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { ScrollProvider } from "../Sub/ScrollContext";
 import { Routes, Route } from "react-router-dom";
+import Signup from "../../pages/Signup/Signup";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path="/detail/:id" element={<AboutPage />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="login" element={<Login />} />
+          <Route path="register" element={<Signup />} />
         </Routes>
         <style.ShadowLayer />
       </ScrollProvider>

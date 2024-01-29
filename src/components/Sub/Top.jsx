@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link, useParams, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { addItem, addSelectedOption, removeSelectedOption } from "../../store";
+import { addItem, addSelectedOption, removeSelectedOption } from "../../store/cart/cart";
 import * as style from "./TopStyle";
 import am7 from "../../data/product/7am.json";
 import am10 from "../../data/product/10am.json";

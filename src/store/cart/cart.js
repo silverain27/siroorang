@@ -1,10 +1,20 @@
 import { configureStore, createSlice } from "@reduxjs/toolkit";
 
 // Cart 상태 관리
-const selectedOptions = createSlice({
+export const selectedOptions = createSlice({
   name: "selectedOptions",
-  initialState: [],
+  initialState: {
+    userId : localStorage.getItem("userId")? JSON.parse(localStorage.getItem("userId")):""
+  },
   reducers: {
+    setUserId : (state, action)=>{
+      state.userId = action.payload
+      localStorage.setItem('userId', JSON.stringify(state.userId))
+    }, 
+    removeUserId: (state, action)=>{
+      state.userId = ""
+      localStorage.setItem('userId', JSON.stringify(state.userId))
+    },
     addSelectedOption(state, action) {
       state.push(action.payload);
     },
@@ -17,10 +27,10 @@ const selectedOptions = createSlice({
   },
 });
 
-export const { addSelectedOption, removeSelectedOption, clearSelectedOptions } =
+export const { setUserId, removeUserId, addSelectedOption, removeSelectedOption, clearSelectedOptions } =
   selectedOptions.actions;
 
-let cart = createSlice({
+  export let cart = createSlice({
   name: "cart",
   initialState: {
     items: [
@@ -113,7 +123,7 @@ let cart = createSlice({
 export const { addCount, decreaseCount, addItem, deleteItem, updateQuantity } =
   cart.actions;
 
-const calculatePrice = createSlice({
+export const calculatePrice = createSlice({
   name: "calculatePrice",
   initialState: {
     calculateItemPrice: 0,
@@ -202,7 +212,7 @@ const calculatePrice = createSlice({
 export const { calculateItemPrice, totalDiscount, totalPrice, finalPrice } =
   calculatePrice.actions;
 
-const detail = createSlice({
+export const detail = createSlice({
   name: "detail",
   initialState: {},
   reducers: {
@@ -214,7 +224,7 @@ const detail = createSlice({
 
 export const { setDetail } = detail.actions;
 
-const products = createSlice({
+export const products = createSlice({
   name: "products",
   initialState: [],
   reducers: {
@@ -226,16 +236,5 @@ const products = createSlice({
 
 export const { setProducts } = products.actions;
 
-const rootReducer = {
-  selectedOptions: selectedOptions.reducer,
-  cart: cart.reducer,
-  calculatePrice: calculatePrice.reducer,
-  detail: detail.reducer,
-  products: products.reducer,
-};
 
-const store = configureStore({
-  reducer: rootReducer,
-});
 
-export default store;

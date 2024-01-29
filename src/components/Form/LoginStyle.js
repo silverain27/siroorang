@@ -1,4 +1,17 @@
 import styled from "styled-components";
+export const Error = styled.div`
+  position: relative;
+  display: block;
+  width: 100%;
+  margin-botton : 10px;
+  padding: 5px;
+  color: #fff;
+  font-size: 13px;
+  background: lightblue;
+  border: 1px solid var(--second-color);
+  border-radius: 5px;
+  box-shadow: rgb(0 0 0 / 16%) 0 3px 6px, rgb(0 0 0 / 23%) 0 3px 6px;
+`
 
 export const Login = styled.div`
   width: 100%;
@@ -207,4 +220,5 @@ export const Login = styled.div`
       }
     }
   }
+  
 `;

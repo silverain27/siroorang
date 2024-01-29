@@ -13,7 +13,7 @@ import {
   totalDiscount,
   totalPrice,
   finalPrice,
-} from "../../store";
+} from "../../store/cart/cart.js";
 import { Link } from "react-router-dom";
 
 function Cart() {
